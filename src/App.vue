@@ -169,6 +169,9 @@ export default {
                 document.getElementById(elementIds[i]).className += " error-input-field";
                 document.getElementById(elementIds[i] + "-err").style.display = "block";
             }
+
+            // Set focus to the first field with an error message
+            document.getElementById(elementIds[0]).focus();
         },
 
         // Used to close the bootstrap alert manually so that it can be displayed again
