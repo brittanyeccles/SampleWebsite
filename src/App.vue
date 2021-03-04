@@ -34,12 +34,14 @@
             </select>
         </div>
         <div v-if="form.questionType == 'order'" class="form-group">
+            <p>If you have an order number associated with your question, please provide it below.</p>
             <div class="form-group">
                 <label for="orderNumber" class="sr-only">Order Number</label>
                 <input type="text" class="form-control" id="orderNumber" placeholder="Order Number" v-model="form.orderNumber" />
             </div>
         </div>
         <div v-if="form.questionType == 'item'">
+            <p>If you have an item number associated with your question, please provide it below.</p>
             <div class="form-group">
                 <label for="itemNumber" class="sr-only">Item Number</label>
                 <input type="text" class="form-control" id="itemNumber" placeholder="Item Number" />
