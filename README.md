@@ -1,4 +1,4 @@
-# todo-list
+# sample_website
 
 ## Project setup
 ```
