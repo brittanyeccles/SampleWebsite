@@ -41,7 +41,4 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-#welcome-img {
-    width: 100%;
-}
 </style>
