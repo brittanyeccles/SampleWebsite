@@ -1,11 +1,11 @@
 <template>
     <NavigationBar current="Contact Us" />
     <div class="alert alert-success alert-dismissible" style="display: none" id="submit-success-msg">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close" @click="closeAlert('submit-success-msg');">&times;</button>
         Your form has successfully been submitted. You should hear back from us in 1-2 business days.
     </div>
     <div class="alert alert-danger alert-dismissible" style="display: none" id="submit-error-msg">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <button type="button" class="close" @click="closeAlert('submit-error-msg');">&times;</button>
         An error has occured while submitting your form. Please try again later.
     </div>
     <form>
@@ -170,6 +170,11 @@ export default {
                 document.getElementById(elements[i]).className += " error-input-field";
                 document.getElementById(elements[i] + "-err").style.display = "block";
             }
+        },
+
+        // Used to close the bootstrap alert manually so that it can be displayed again
+        closeAlert: function(alertId) {
+            $("#" + alertId).fadeOut();
         }
     }
 }
