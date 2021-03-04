@@ -164,11 +164,10 @@ export default {
 
         // Used to display the proper error message string on the invalid inputted field, as well as
         // adding the correct styles to the input box and setting the focus on the input box
-        setErrorStyles: function(...elementIds) {
-            let elements = elementIds[0];
-            for (let i = 0; i < elements.length; i++) {
-                document.getElementById(elements[i]).className += " error-input-field";
-                document.getElementById(elements[i] + "-err").style.display = "block";
+        setErrorStyles: function(elementIds) {
+            for (let i = 0; i < elementIds.length; i++) {
+                document.getElementById(elementIds[i]).className += " error-input-field";
+                document.getElementById(elementIds[i] + "-err").style.display = "block";
             }
         },
 
